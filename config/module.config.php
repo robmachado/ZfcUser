@@ -13,6 +13,7 @@ return array(
     'service_manager' => array(
         'aliases' => array(
             'zfcuser_zend_db_adapter' => 'Zend\Db\Adapter\Adapter',
+            'translator' => 'MvcTranslator',
         ),
     ),
     'router' => array(
@@ -77,7 +78,7 @@ return array(
                                 'controller' => 'zfcuser',
                                 'action'     => 'changepassword',
                             ),
-                        ),                        
+                        ),
                     ),
                     'changeemail' => array(
                         'type' => 'Literal',
@@ -87,9 +88,19 @@ return array(
                                 'controller' => 'zfcuser',
                                 'action' => 'changeemail',
                             ),
-                        ),                        
+                        ),
                     ),
                 ),
+            ),
+        ),
+    ),
+    'translator' => array(
+    'locale' => 'en_US',
+    'translation_file_patterns' => array(
+            array(
+                'type'     => 'gettext',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s.mo',
             ),
         ),
     ),

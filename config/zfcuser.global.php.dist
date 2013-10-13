@@ -232,4 +232,10 @@ return array(
             'zfcuser_zend_db_adapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\Adapter',
         ),
     ),
+    /*
+     * Change translation 
+     */
+    //'translator' => array(
+    //    'locale' => 'en_US',
+    //),
 );
